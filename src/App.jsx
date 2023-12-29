@@ -7,7 +7,7 @@ const API_URL = "https://www.omdbapi.com?apikey=ccafaea2";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
@@ -22,35 +22,34 @@ const App = () => {
 
   return (
     <div className="bg-gradient-to-b from-blue-400 to-blue-700 w-full h-full flex flex-col items-center justify-center">
-  {/* Your content goes here */}
-  <h1 className="text-white">Movie App</h1>
-  <div className="mt-4">
-    <input
-      type="text"
-      placeholder="Search for movies"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="bg-white p-2 rounded-md"
-    />
-    <img
-      src={SearchIcon}
-      alt="search"
-      onClick={() => searchMovies(searchTerm)}
-      className="cursor-pointer ml-2"
-    />
-  </div>
-  {movies?.length > 0 ? (
-    <div className="mt-4">
-      {movies.map((movie) => (
-        <MovieCard key={movie.id} movie1={movie} />
-      ))}
+      <h1 className="text-white">Movie App</h1>
+      <div className="mt-4">
+        <input
+          type="text"
+          placeholder="Search for movies"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="bg-white p-2 rounded-md"
+        />
+        <img
+          src={SearchIcon}
+          alt="search"
+          onClick={() => searchMovies(searchTerm)}
+          className="cursor-pointer ml-2"
+        />
+      </div>
+      {movies?.length > 0 ? (
+        <div className="mt-4">
+          {movies.map((movie) => (
+            <MovieCard key={movie.id} movie1={movie} />
+          ))}
+        </div>
+      ) : (
+        <div className="mt-4">
+          <h2 className="text-white">No movies found</h2>
+        </div>
+      )}
     </div>
-  ) : (
-    <div className="mt-4">
-      <h2 className="text-white">No movies found</h2>
-    </div>
-  )}
-</div>
   );
 };
 export default App;
