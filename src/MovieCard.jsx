@@ -1,8 +1,8 @@
 import React from 'react'
 
-const MovieCard = ({ movie1: movie }) => {
+const MovieCard = ({ movie1: movie, className }) => {
     return (
-        <div className = "movie">
+        <div className={`bg-white p-4 rounded-md ${className}`}>
           <div>
             <p>{movie.Year}</p>
           </div>

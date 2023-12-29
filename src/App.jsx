@@ -21,8 +21,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-blue-400 to-blue-700 w-full h-full flex flex-col items-center justify-center">
-      <h1 className="text-white">Movie App</h1>
+    <div className="bg-gradient-to-b from-blue-400 to-blue-700 w-full min-h-screen flex flex-col items-center justify-center font-display">
+      <h1 className="text-white text-8xl">Movie App</h1>
       <div className="mt-4">
         <input
           type="text"
@@ -39,9 +39,9 @@ const App = () => {
         />
       </div>
       {movies?.length > 0 ? (
-        <div className="mt-4">
+        <div className="mt-4 flex flex-wrap justify-center">
           {movies.map((movie) => (
-            <MovieCard key={movie.id} movie1={movie} />
+            <MovieCard key={movie.id} movie1={movie} className="m-4" />
           ))}
         </div>
       ) : (
