@@ -1,5 +1,5 @@
 import "./index.css";
-import SearchIcon from "./search.svg";
+import SearchIcon from "./search.png";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
@@ -17,27 +17,37 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchMovies("barbie");
+    searchMovies("");
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-blue-400 to-blue-700 w-full min-h-screen flex flex-col items-center justify-center font-display">
-      <h1 className="text-white text-8xl">Movie App</h1>
-      <div className="mt-4">
+    <div className=" min-h-screen bg-moon w-full min-h-screen flex flex-col items-center justify-center font-regular">
+      <div className="flex items-center">
+        <h1 className="text-purple1 text-8xl drop-shadow-[0_0_2px_#802BB1] font-display relative z-20">
+          NETSPACE
+        </h1>
+        <img
+          src={"../public/moon-icon.png"} // Replace with the actual path to your moon icon
+          alt="moon"
+          className="cursor-pointer w-20 h-20 ml-5 animate-spin-slow" // Adjust width, height, and position as needed
+        />
+      </div>
+      <div className="mt-4 flex items-center">
         <input
           type="text"
           placeholder="Search for movies"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="bg-white p-2 rounded-md"
+          className="bg-white p-2 rounded-md focus:outline-none focus:drop-shadow-[0_0_10px_#802BB1]"
         />
         <img
           src={SearchIcon}
           alt="search"
           onClick={() => searchMovies(searchTerm)}
-          className="cursor-pointer ml-2"
+          className="cursor-pointer ml-2 w-10 h-10"
         />
       </div>
+
       {movies?.length > 0 ? (
         <div className="mt-4 flex flex-wrap justify-center">
           {movies.map((movie) => (
@@ -45,9 +55,7 @@ const App = () => {
           ))}
         </div>
       ) : (
-        <div className="mt-4">
-          <h2 className="text-white">No movies found</h2>
-        </div>
+        <div className="mt-4"></div>
       )}
     </div>
   );
