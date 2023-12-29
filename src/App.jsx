@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import SearchIcon from "./search.svg";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
@@ -21,29 +21,36 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
-      <h1>Movie App</h1>
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Search for movies"
-          value = {searchTerm}
-          onChange={(e) => {setSearchTerm(e.target.value)}}
-        />
-        <img src={SearchIcon} alt="search" onClick={() =>searchMovies(searchTerm)} />
-      </div>
-      {movies?.length > 0 ? (
-        <div className="container">
-          {movies.map((movie) => (
-            <MovieCard movie1={movie} />
-          ))}
-        </div>
-      ) : (
-        <div className="empty">
-          <h2>No movies found</h2>
-        </div>
-      )}
+    <div className="bg-gradient-to-b from-blue-400 to-blue-700 w-full h-full flex flex-col items-center justify-center">
+  {/* Your content goes here */}
+  <h1 className="text-white">Movie App</h1>
+  <div className="mt-4">
+    <input
+      type="text"
+      placeholder="Search for movies"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="bg-white p-2 rounded-md"
+    />
+    <img
+      src={SearchIcon}
+      alt="search"
+      onClick={() => searchMovies(searchTerm)}
+      className="cursor-pointer ml-2"
+    />
+  </div>
+  {movies?.length > 0 ? (
+    <div className="mt-4">
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} movie1={movie} />
+      ))}
     </div>
+  ) : (
+    <div className="mt-4">
+      <h2 className="text-white">No movies found</h2>
+    </div>
+  )}
+</div>
   );
 };
 export default App;
