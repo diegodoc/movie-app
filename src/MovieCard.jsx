@@ -3,7 +3,7 @@ import React from "react";
 const MovieCard = ({ movie1: movie, className }) => {
   return (
     <div
-      className={`p-4 rounded-md transition-colors border border-purple1 border-solid border-t-1 text-white drop-shadow-[0_0_40px_#802BB1] ${className}`}
+      className={`p-4 rounded-md transition-colors border border-purple1 border-solid border-t-1 text-white drop-shadow-[0_0_10px_#802BB1] ${className}`}
     >
       <div>
         <p>{movie.Year}</p>
