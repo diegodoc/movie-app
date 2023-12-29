@@ -3,7 +3,7 @@ import React from "react";
 const MovieCard = ({ movie1: movie, className }) => {
   return (
     <div
-      className={`p-4 rounded-md transition-colors border border-purple1 border-solid border-t-1 text-white drop-shadow-[0_0_10px_#802BB1] ${className}`}
+      className={`p-4 bg-opacity-20 bg-blue-600 rounded-md transition-colors border-blue-700 border-solid border-4 text-white ${className}`}
     >
       <div>
         <p>{movie.Year}</p>
@@ -19,7 +19,7 @@ const MovieCard = ({ movie1: movie, className }) => {
         />
       </div>
       <div>
-        <h3>{movie.Title}</h3>
+        <h3 className="font-extrabold">{movie.Title}</h3>
       </div>
     </div>
   );

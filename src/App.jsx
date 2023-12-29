@@ -1,5 +1,5 @@
 import "./index.css";
-import SearchIcon from "./search.png";
+import SearchIcon from "./search3.png";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className=" min-h-screen bg-moon w-full min-h-screen flex flex-col items-center justify-center font-regular">
       <div className="flex items-center">
-        <h1 className="text-purple1 text-8xl drop-shadow-[0_0_2px_#802BB1] font-display relative z-20">
+        <h1 className="text-blue-600 text-8xl drop-shadow-[0_0_2px_#2563EB] font-display relative z-20">
           NETSPACE
         </h1>
         <img
@@ -38,7 +38,7 @@ const App = () => {
           placeholder="Search for movies"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="bg-white p-2 rounded-md focus:outline-none focus:drop-shadow-[0_0_10px_#802BB1]"
+          className="bg-white p-2 rounded-md focus:outline-none focus:drop-shadow-[0_0_10px_#2563EB]"
         />
         <img
           src={SearchIcon}

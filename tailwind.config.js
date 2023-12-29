@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        'spin-slow': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        }
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
-        'spin-slow': 'spin-slow 3s ease-in-out infinite',
+        "spin-slow": "spin-slow 3s ease-in-out infinite",
       },
       fontFamily: {
         display: ["Bebas Neue", "sans-serif"],
@@ -25,14 +25,14 @@ export default {
         tangerine: "##FA5D29",
       },
       backgroundImage: {
-        'purple-pattern' : "url('./public/bg-pattern.jpeg')",
-        'moon': "url('./public/moon.jpeg')",
-        'moon-icon': "url('./public/moon-icon.png')",
+        "purple-pattern": "url('./public/bg-pattern.jpeg')",
+        moon: "url('./public/moon.jpeg')",
+        "moon-icon": "url('./public/moon-icon.png')",
       },
       backgroundColor: {
-        'html': "#000",
-        'body': "#000"
-      }
+        html: "#000",
+        body: "#000",
+      },
     },
     plugins: [],
   },
