@@ -1,5 +1,6 @@
 import "./index.css";
 import SearchIcon from "./search3.png";
+import MoonIcon from "./moon-icon.png"
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
@@ -27,7 +28,7 @@ const App = () => {
           NETSPACE
         </h1>
         <img
-          src={"../public/moon-icon.png"} // Replace with the actual path to your moon icon
+          src={MoonIcon} // Replace with the actual path to your moon icon
           alt="moon"
           className="cursor-pointer w-20 h-20 ml-5 animate-spin-slow" // Adjust width, height, and position as needed
         />
@@ -44,7 +45,7 @@ const App = () => {
           src={SearchIcon}
           alt="search"
           onClick={() => searchMovies(searchTerm)}
-          className="cursor-pointer ml-2 w-10 h-10"
+          className="cursor-pointer ml-2  jw-10 h-10"
         />
       </div>
 
