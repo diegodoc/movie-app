@@ -24,9 +24,6 @@ export default {
         darkerGray: "#4C495D",
         tangerine: "##FA5D29",
       },
-      backgroundImage: {
-        "moon": "url('./src/moon.jpeg')",
-      },
       backgroundColor: {
         html: "#000",
         body: "#000",

@@ -22,7 +22,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className=" min-h-screen bg-moon w-full min-h-screen flex flex-col items-center justify-center font-regular">
+    <div className=" min-h-screen bg-[url('./src/moon.jpeg')] w-full min-h-screen flex flex-col items-center justify-center font-regular" >
       <div className="flex items-center">
         <h1 className="text-blue-600 text-8xl drop-shadow-[0_0_2px_#2563EB] font-display relative z-20">
           NETSPACE
