@@ -25,8 +25,7 @@ export default {
         tangerine: "##FA5D29",
       },
       backgroundImage: {
-        moon: "url('./src/moon.jpeg')",
-        "moon-icon": "url('./src/moon-icon.png')",
+        "moon": "url('./src/moon.jpeg')",
       },
       backgroundColor: {
         html: "#000",
